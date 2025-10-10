@@ -19,13 +19,6 @@ ul {
     margin: 0
 }
 
-body {
-    background: var(--background-color);
-    transform: translateY(50px);
-    opacity: .5;
-    transition: .700s;
-    overflow-x: hidden;
-}
 
 html {
     scroll-behavior: smooth
@@ -72,3 +65,4 @@ html {
         max-width: 1320px;
     }
 }
+
