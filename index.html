@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Blend Clone</title>
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- Start Header  -->
     <header>
+      <div class="container">
+        <div class="header-top">
+          <!-- social-->
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.google.com" target="_blank"
+              ><i class="fab fa-google"></i
+            ></a>
+          </div>
+          <a href="#" class="log-in">log in / register</a>
+          <p class="text-header">Welcome to Blend furniture store website</p>
+        </div>
         <nav>
-            <a  href="index.html class="active">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            <a href="cart.html">Cart</a>
+          <img src="images/Home/home01.png" alt="" class="logo" />
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="new arrivals.html">new arrivals</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="brands.html">brands</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <button class="search">
+            <i class="fas fa-search"></i>
+          </button>
         </nav>
+      </div>
     </header>
-<!-- End Header -->
+    <!-- End Header -->
     <!-- Main Content -->
     <main>
-    <!--start  Landing Section -->
-    <section id="landing">
-    </section>
+      <!--start  Landing Section -->
+      <section id="landing"></section>
       <!-- end Landing Section -->
     </main>
 
     <!-- Start Footer -->
-    <footer>
-    </footer>
+    <footer></footer>
     <!-- End Footer -->
     <!-- JS -->
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/products.js"></script>
-</body>
+  </body>
 </html>
-
