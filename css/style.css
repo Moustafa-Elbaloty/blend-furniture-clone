@@ -1,11 +1,18 @@
 /* start rules */
 :root {
-  
+  --bg-color:#FFFFFF;
+  --sec-color:#AB1F65;
+  --txt-color:black;
+  --sec-txt:#666666;
+  --bg-color-dark:#1A1A1A;
+  --txt-color-dark:#FFFFFF;
+  --sec-txt-dark:#D6C2C2;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: sans-serif
 }
 
