@@ -31,8 +31,12 @@ html {
     scroll-behavior: smooth
 }
 
-/* end Global Rules */
+::selection {
+    background-color: var(--sec-color);
+    color: #ffffff;
+}
 
+/* end Global Rules */
 
 .container {
     width: 100%;
@@ -44,32 +48,220 @@ html {
 
 /* end componanet */
 
-/* Tablets (≥ 768px) */
-
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
     }
 }
 
-/* Small laptops (≥ 992px) */
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
     }
 }
 
-/* Desktops (≥ 1200px)*/
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
 }
 
-/* Large screens (≥ 1400px) */
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
     }
 }
 
+/* start header */
+header {
+    position: relative
+}
+
+header:before,
+header:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #e1e1e1;
+    bottom: 0
+}
+
+header:before {
+    bottom: 100px
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.header-top .social-icons {
+    padding: 8px;
+    width: 100%;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.header-top .social-icons a {
+    display: inline-block;
+    color: black;
+    background: #e8e8e8;
+    padding: 5px;
+    transition: .5s;
+}
+
+.header-top .social-icons a:hover {
+    transform: rotate(10deg) scale(1.04);
+    background: var(--sec-color);
+    color: white;
+}
+
+.header-top .log-in {
+    font-weight: 700;
+    color: var(--sec-color);
+    text-transform: capitalize;
+    font-size: .7rem;
+    position: relative
+}
+
+.header-top .log-in:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--sec-color);
+    transition: .5s all;
+}
+
+.header-top .log-in:hover:after {
+    width: 100%
+}
+
+.header-top .text-header {
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+/* start nav */
+nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+nav .logo {
+    height: 100px
+}
+
+nav button {
+    color: white;
+    background: var(--sec-color);
+    border: none;
+    padding: 6px;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav button.search {
+    display: none
+}
+
+
+nav .links {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    left: 0;
+    height: 100vh;
+    color: white;
+    padding: 100px 0;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: .5s
+}
+
+nav .links .close-btn button {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    font-weight: 700;
+}
+
+nav .links li a {
+    display: block;
+    border-top: 1px solid #1f1f1f1f;
+    padding: 10px 25px;
+    color: #1f1f1f8c;
+    text-transform: capitalize;
+    transition: .5s;
+
+}
+
+nav .links li a:hover {
+    background: var(--sec-color);
+    color: #ffffff;
+    transform: scale(1.03)
+}
+
+/* end header */
+@media (min-width: 768px) {
+    .header-top {
+        transition: .5s;
+        flex-direction: row-reverse;
+        gap: 20px
+    }
+
+    .header-top .social-icons {
+        width: fit-content;
+        background: none
+    }
+
+    nav button {
+        display: none
+    }
+
+    nav button.search {
+        display: block
+    }
+
+    nav .links {
+        position: static;
+        background-color: transparent;
+        height: auto;
+        padding: 0;
+        transform: scale(1);
+        display: flex;
+        justify-content: end;
+    }
+
+    .active {}
+
+    nav .links li a {
+        display: block;
+        border-top: none;
+        border-right: 1px solid #1f1f1f1f;
+        padding: 3px 15px;
+        color: #1f1f1f8c;
+        text-transform: capitalize;
+        transition: .5s;
+
+    }
+
+    nav .links li a:hover {
+        background: none;
+        color: var(--bg-color-dark);
+
+    }
+}
