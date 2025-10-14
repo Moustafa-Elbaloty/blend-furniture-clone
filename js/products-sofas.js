@@ -9,10 +9,10 @@ row.className = "row g-4"
 box.appendChild(row)
 
 const sofas = [
-    {  name: "Leclair", link: "./images/Sofas/Léclair-2-705x705.jpg" },
-    {  name: "Cocò L-shape/Corner", link: "./images/Sofas/coco-9-705x705.jpg" },
+    {  name: "Leclair", link: "./images/sofas/Léclair-2-705x705.jpg" },
+    {  name: "Cocò L-shape/Corner", link: "./images/sofas/coco-9-705x705.jpg" },
     {  name: "Gianduiotto LShape/Corner", link: "./images/sofas/download.jpg" },
-    {  name: "Sir William", link: "./images/Sofas/4-5-450x450.jpg" },
+    {  name: "Sir William", link: "./images/sofas/4-5-450x450.jpg" },
     {  name: "Gianduiotto Sofa", link: "./images/Sofas/2-6-450x450.jpg" },
     {  name: "Lazy LShape/Corner", link: "./images/Sofas/4-3-450x450.jpg" },
     {  name: "Cocò Sofa", link: "./images/Sofas/cal-1018_cocò-3-white-450x449.jpg" },
@@ -83,3 +83,4 @@ sofas.forEach(sofa => {
     col.appendChild(card)
 
 })
+
