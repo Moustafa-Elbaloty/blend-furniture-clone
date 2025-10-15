@@ -46,3 +46,54 @@ products.addEventListener("click", function () {
     dropdownList.classList.toggle("hidden")
 })
 
+let links = document.querySelectorAll(".links a")
+links.forEach((a) => {
+    a.addEventListener("click", (e) => {
+        links.forEach((el) => {
+            el.classList.remove("active")
+        })
+        e.target.classList.add("active")
+    })
+}
+)
+
+///************wrap image****************///
+let images = [
+    { src: "images/Home/home06.jpg", data: "sofas" },
+    { src: "images/Home/home07.jpg", data: "recliners" },
+    { src: "images/Home/home08.jpg", data: "dinin Tables" },
+    { src: "images/Home/home05.jpg", data: "chairs" },
+    { src: "images/Home/home06.jpg", data: "coffee tables" }
+];
+let ul = document.querySelector(".wrap-img");
+images.forEach(image => {
+    // create Element
+    let li = document.createElement("li")
+    let a = document.createElement("a")
+    let img = document.createElement("img");
+    img.src = image.src;
+    a.setAttribute("data-text", image.data);
+    a.append(img)
+    li.append(a)
+    ul.append(li)
+})
+
+// *********feature****
+let feature = document.querySelector(".feature")
+let heading = document.createElement("img")
+feature.style.cssText = `text-align:center;padding:100px 0;`
+heading.style.cssText = `transform: translateY(70px);transition:.5s`
+heading.className = "head"
+heading.src = 'images/Home/home10.jpg'
+feature.prepend(heading)
+// moving in scroll 
+const observHead = new IntersectionObserver(e => {
+    e.forEach(img => {
+        if (img.isIntersecting) {
+            img.target.style.transform = "translateY(0)";
+        } else {
+            img.target.style.transform = "translateY(70px)";
+        }
+    })
+})
+observHead.observe(heading)
