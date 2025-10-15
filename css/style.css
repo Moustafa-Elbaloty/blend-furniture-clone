@@ -14,6 +14,19 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+    --bg-color: #FFFFFF;
+    --sec-color: #AB1F65;
+    --txt-color: black;
+    --sec-txt: #666666;
+    --bg-color-dark: #1A1A1A;
+    --txt-color-dark: #FFFFFF;
+    --sec-txt-dark: #D6C2C2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif
 }
 
 a {
@@ -146,6 +159,8 @@ header:before {
   font-weight: 600;
 }
 
+
+
 /* start nav */
 nav {
   margin-top: 15px;
@@ -212,7 +227,41 @@ nav .links li a:hover {
   transform: scale(1.03);
 }
 
+.dropdown-List.hidden {
+    display: block !important;
+}
+
 /* end header */
+
+/* start landing */
+
+/* ///////////////////not complete/////////////////////////////// */
+.wrap-img {
+    display: flex;
+    overflow: hidden
+}
+
+.wrap-img a {
+    transition: .5s
+}
+
+.wrap-img img {
+    max-width: 100%;
+}
+
+.wrap-img a:hover img {
+    transform: scaleX(1.2)
+}
+
+/* ///////////////////not complete/////////////////////////////// */
+/* end landing */
+@media (min-width: 768px) {
+    .header-top {
+        transition: .5s;
+        flex-direction: row-reverse;
+        gap: 20px
+    }
+}
 
 /* start check_out */
 
@@ -389,4 +438,56 @@ i {
   .info form {
     padding: 15px;
   }
+    nav button {
+        display: none
+    }
+
+    nav button.search {
+        display: block
+    }
+
+    nav .links {
+        position: static;
+        background-color: transparent;
+        height: auto;
+        padding: 0;
+        transform: scale(1);
+        display: flex;
+        justify-content: end;
+        overflow: visible
+    }
+
+
+    nav .links li a {
+        display: block;
+        border-top: none;
+        border-right: 1px solid #1f1f1f1f;
+        padding: 3px 10px;
+        color: #1f1f1f8c;
+        text-transform: capitalize;
+        transition: .5s;
+        font-size: .8rem;
+
+    }
+
+    nav .links li a:hover {
+        background: none;
+        color: var(--bg-color-dark);
+
+    }
+
+
+    .dropdown-List.hidden {
+        display: flex !important;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -74px;
+        right: 0;
+        background: white;
+        min-width: 670px;
+    }
+
+    .dropdown-List a {
+        padding: 10px 25px !important;
+    }
 }
