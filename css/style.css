@@ -23,12 +23,6 @@
     --sec-txt-dark: #D6C2C2;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: sans-serif
-}
-
 a {
   text-decoration: none;
 }
@@ -433,8 +427,10 @@ i {
     background: none;
     color: var(--bg-color-dark);
   }
-}
-@media (max-width: 480px) {
+} 
+
+/* ///////////////////////////////////// */
+/*@media (max-width: 480px) {
   .info form {
     padding: 15px;
   }
@@ -457,7 +453,6 @@ i {
         overflow: visible
     }
 
-
     nav .links li a {
         display: block;
         border-top: none;
@@ -467,7 +462,6 @@ i {
         text-transform: capitalize;
         transition: .5s;
         font-size: .8rem;
-
     }
 
     nav .links li a:hover {
@@ -475,7 +469,6 @@ i {
         color: var(--bg-color-dark);
 
     }
-
 
     .dropdown-List.hidden {
         display: flex !important;
@@ -490,4 +483,5 @@ i {
     .dropdown-List a {
         padding: 10px 25px !important;
     }
-}
+} */
+/* ///////////////////////////////////// */
