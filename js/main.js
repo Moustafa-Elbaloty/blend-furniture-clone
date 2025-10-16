@@ -110,4 +110,5 @@ let cardImg = [
     { src: "images/Home/home05.jpg", data: "chairs" },
     { src: "images/Home/home06.jpg", data: "coffee tables" }
 ];
-cardImg
+
+
