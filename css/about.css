@@ -58,6 +58,16 @@
   padding: 30px 0 50px;
   text-align: center;
 }
+.clients-section img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.clients-subheads {
+  max-width: 100%;
+}
 /* responsive single logos image */
 .clients-section .responsive-logos {
   width: 100%;
