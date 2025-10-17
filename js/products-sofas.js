@@ -42,36 +42,36 @@ const sofas = [
 ];
 
 const sofasHover = [
-    { link: "./images/Sofas/Léclair-1-705x705.jpg" },
+    { link: "./images/sofas/Léclair-1-705x705.jpg" },
     { link: "./images/sofas/coco-9-705x705.jpg" },
     { link: "./images/sofas/download.jpg" },
-    { link: "./images/Sofas/1-6-450x450.jpg" },
+    { link: "./images/sofas/1-6-450x450.jpg" },
     { link: "./images/sofas/2-6-450x450.jpg" },
-    { link: "./images/Sofas/3-3-450x450.jpg" },
+    { link: "./images/sofas/3-3-450x450.jpg" },
     { link: "./images/sofas/cal-1018_cocò-3-white-450x449.jpg" },
-    { link: "./images/Sofas/2-1-450x450.jpg" },
-    { link: "./images/Sofas/3-450x450.jpg" },
+    { link: "./images/sofas/2-1-450x450.jpg" },
+    { link: "./images/sofas/3-450x450.jpg" },
     { link: "./images/sofas/2-450x450.jpg" },
-    { link: "./images/Sofas/Genius-2-450x450.jpg" },
-    { link: "./images/Sofas/18.jpg" },
-    { link: "./images/Sofas/3-9.jpg" },
-    { link: "./images/Sofas/1-1-500x500.jpg" },
-    { link: "./images/Sofas/5.jpg" },
-    { link: "./images/Sofas/5-6.jpg" },
-    { link: "./images/Sofas/27.jpg" },
-    { link: "./images/Sofas/234.jpg" },
-    { link: "./images/Sofas/4.jpg" },
-    { link: "./images/Sofas/Taylor-web4.jpg" },
-    { link: "./images/Sofas/paride-3.jpg" },
+    { link: "./images/sofas/Genius-2-450x450.jpg" },
+    { link: "./images/sofas/18.jpg" },
+    { link: "./images/sofas/3-9.jpg" },
+    { link: "./images/sofas/1-1-500x500.jpg" },
+    { link: "./images/sofas/5.jpg" },
+    { link: "./images/sofas/5-6.jpg" },
+    { link: "./images/sofas/27.jpg" },
+    { link: "./images/sofas/234.jpg" },
+    { link: "./images/sofas/4.jpg" },
+    { link: "./images/sofas/Taylor-web4.jpg" },
+    { link: "./images/sofas/paride-3.jpg" },
     { link: "./images/sofas/paride-4-1-705x705.jpg" },
-    { link: "./images/Sofas/Elisir7.jpg" },
-    { link: "./images/Sofas/Fleur-3.jpg" },
-    { link: "./images/Sofas/Matheola-4.jpg" },
-    { link: "./images/Sofas/cal-1018_cocò-3-1030x1028.jpg" },
-    { link: "./images/Sofas/Matheola-11.jpg" },
-    { link: "./images/Sofas/Fox-trot-3.jpg" },
-    { link: "./images/Sofas/2-12.jpg" },
-    { link: "./images/Sofas/Elisir2.jpg" }
+    { link: "./images/sofas/Elisir7.jpg" },
+    { link: "./images/sofas/Fleur-3.jpg" },
+    { link: "./images/sofas/Matheola-4.jpg" },
+    { link: "./images/sofas/cal-1018_cocò-3-1030x1028.jpg" },
+    { link: "./images/sofas/Matheola-11.jpg" },
+    { link: "./images/sofas/Fox-trot-3.jpg" },
+    { link: "./images/sofas/2-12.jpg" },
+    { link: "./images/sofas/Elisir2.jpg" }
 ];
 document.body.appendChild(box)
 sofas.forEach((sofa, index) => {
@@ -154,3 +154,4 @@ sofas.forEach((sofa, index) => {
         img.src = sofa.link;
     })
 })
+
