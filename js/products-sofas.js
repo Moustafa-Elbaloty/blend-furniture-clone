@@ -42,36 +42,36 @@ const sofas = [
 ];
 
 const sofasHover = [
-    { link: "./images/sofas/Léclair-1-705x705.jpg" },
+    { link: "./images/Sofas/Léclair-1-705x705.jpg" },
     { link: "./images/sofas/coco-9-705x705.jpg" },
     { link: "./images/sofas/download.jpg" },
-    { link: "./images/sofas/1-6-450x450.jpg" },
+    { link: "./images/Sofas/1-6-450x450.jpg" },
     { link: "./images/sofas/2-6-450x450.jpg" },
-    { link: "./images/sofas/3-3-450x450.jpg" },
+    { link: "./images/Sofas/3-3-450x450.jpg" },
     { link: "./images/sofas/cal-1018_cocò-3-white-450x449.jpg" },
-    { link: "./images/sofas/2-1-450x450.jpg" },
-    { link: "./images/sofas/3-450x450.jpg" },
+    { link: "./images/Sofas/2-1-450x450.jpg" },
+    { link: "./images/Sofas/3-450x450.jpg" },
     { link: "./images/sofas/2-450x450.jpg" },
-    { link: "./images/sofas/Genius-2-450x450.jpg" },
-    { link: "./images/sofas/18.jpg" },
-    { link: "./images/sofas/3-9.jpg" },
-    { link: "./images/sofas/1-1-500x500.jpg" },
-    { link: "./images/sofas/5.jpg" },
-    { link: "./images/sofas/5-6.jpg" },
-    { link: "./images/sofas/27.jpg" },
-    { link: "./images/sofas/234.jpg" },
-    { link: "./images/sofas/4.jpg" },
-    { link: "./images/sofas/Taylor-web4.jpg" },
-    { link: "./images/sofas/paride-3.jpg" },
+    { link: "./images/Sofas/Genius-2-450x450.jpg" },
+    { link: "./images/Sofas/18.jpg" },
+    { link: "./images/Sofas/3-9.jpg" },
+    { link: "./images/Sofas/1-1-500x500.jpg" },
+    { link: "./images/Sofas/5.jpg" },
+    { link: "./images/Sofas/5-6.jpg" },
+    { link: "./images/Sofas/27.jpg" },
+    { link: "./images/Sofas/234.jpg" },
+    { link: "./images/Sofas/4.jpg" },
+    { link: "./images/Sofas/Taylor-web4.jpg" },
+    { link: "./images/Sofas/paride-3.jpg" },
     { link: "./images/sofas/paride-4-1-705x705.jpg" },
-    { link: "./images/sofas/Elisir7.jpg" },
-    { link: "./images/sofas/Fleur-3.jpg" },
-    { link: "./images/sofas/Matheola-4.jpg" },
-    { link: "./images/sofas/cal-1018_cocò-3-1030x1028.jpg" },
-    { link: "./images/sofas/Matheola-11.jpg" },
-    { link: "./images/sofas/Fox-trot-3.jpg" },
-    { link: "./images/sofas/2-12.jpg" },
-    { link: "./images/sofas/Elisir2.jpg" }
+    { link: "./images/Sofas/Elisir7.jpg" },
+    { link: "./images/Sofas/Fleur-3.jpg" },
+    { link: "./images/Sofas/Matheola-4.jpg" },
+    { link: "./images/Sofas/cal-1018_cocò-3-1030x1028.jpg" },
+    { link: "./images/Sofas/Matheola-11.jpg" },
+    { link: "./images/Sofas/Fox-trot-3.jpg" },
+    { link: "./images/Sofas/2-12.jpg" },
+    { link: "./images/Sofas/Elisir2.jpg" }
 ];
 document.body.appendChild(box)
 sofas.forEach((sofa, index) => {
@@ -79,7 +79,7 @@ sofas.forEach((sofa, index) => {
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
     const card = document.createElement("div")
-    card.className = "card h-100 shadow-sm"
+    card.className = "card h-100 border-0"
     card.style.cursor = "pointer"
 
     const img = document.createElement("img")
@@ -87,25 +87,59 @@ sofas.forEach((sofa, index) => {
     img.className = "card-img-top"
 
     const cardBody = document.createElement("div")
-    cardBody.className = "card-body text-center"
+    cardBody.className = "card-body text-center p-1"
 
-    const title = document.createElement("h6")
+    const title = document.createElement("p")
     title.className = "title "
     title.innerHTML = sofa.name;
+    title.style.fontSize = "15px"
+    title.style.fontWeight = "700"
+
 
     const cardRear = document.createElement("div")
     cardRear.className = "card-rear d-flex justify-content-between p-3 text-center align-items-center";
 
     const showDetails = document.createElement("span")
-    showDetails.className = "show-details d-flex justify-content-left item-center";
-    showDetails.innerHTML = '<i class="fa-solid fa-list-ul d-flex align-self-center"></i> Show Details';
+    showDetails.className = "show-details d-flex justify-content-left item-center text-nowrap";
+    showDetails.innerHTML = '<i class="fa-solid fa-list-ul d-flex align-self-center "></i> Show Details';
+    showDetails.style.fontSize = "11px"
+    showDetails.style.fontWeight = "700"
+
 
     const whishList = document.createElement("span")
-    whishList.className = "whish-list d-flex justify-content-left item-center";
+    whishList.className = "whish-list d-flex flex-row justify-content-left item-center text-nowrap";
     whishList.innerHTML = '<i class="fa-regular fa-star d-flex align-self-center"></i> Add To Wishlist';
+    whishList.style.fontSize = "11px"
+    whishList.style.fontWeight = "700"
+
+
+    const addToCard = document.createElement("button")
+    addToCard.className = "add-to-card d-flex align-items-center align-self-center text-end shadow"
+    addToCard.innerHTML = "Add To Card"
+    addToCard.style.color = "#fff"
+    addToCard.style.backgroundColor = "#AB1F65"
+    addToCard.style.border = "none"
+    addToCard.style.borderRadius = "50px"
+    addToCard.style.width = "80%"
+    addToCard.style.height = "50px"
+    addToCard.style.justifyContent = "center"
+    addToCard.style.margin = "30px"
+
+    addToCard.addEventListener("mouseover", () => {
+        addToCard.style.width = "85%"
+        addToCard.style.transition = "All 0.5s ease";
+        addToCard.style.opacity = 0.7;
+    });
+    addToCard.addEventListener("mouseout", () => {
+        addToCard.style.width = "80%"
+        addToCard.style.transition = "All 0.5s ease";
+        addToCard.style.opacity = 1;
+    });
+
     card.appendChild(img)
     card.appendChild(cardBody)
     card.append(cardRear)
+    card.append(addToCard)
     cardBody.appendChild(title)
     cardBody.appendChild(showDetails)
     cardRear.appendChild(showDetails)
@@ -120,4 +154,3 @@ sofas.forEach((sofa, index) => {
         img.src = sofa.link;
     })
 })
-
