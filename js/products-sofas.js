@@ -85,15 +85,18 @@ sofas.forEach((sofa, index) => {
     const img = document.createElement("img")
     img.src = sofa.link;
     img.className = "card-img-top"
+    img.style.backgroundSize = "cover";
+    img.style.backgroundPosition = "center";
 
     const cardBody = document.createElement("div")
     cardBody.className = "card-body text-center p-1"
 
-    const title = document.createElement("p")
+    const title = document.createElement("h3")
     title.className = "title "
     title.innerHTML = sofa.name;
     title.style.fontSize = "15px"
-    title.style.fontWeight = "700"
+    title.style.marginTop = "15px"
+    title.style.marginBottom = "15px"
 
 
     const cardRear = document.createElement("div")
@@ -105,13 +108,11 @@ sofas.forEach((sofa, index) => {
     showDetails.style.fontSize = "11px"
     showDetails.style.fontWeight = "700"
 
-
     const whishList = document.createElement("span")
     whishList.className = "whish-list d-flex flex-row justify-content-left item-center text-nowrap";
     whishList.innerHTML = '<i class="fa-regular fa-star d-flex align-self-center"></i> Add To Wishlist';
     whishList.style.fontSize = "11px"
     whishList.style.fontWeight = "700"
-
 
     const addToCard = document.createElement("button")
     addToCard.className = "add-to-card d-flex align-items-center align-self-center text-end shadow"
@@ -120,18 +121,19 @@ sofas.forEach((sofa, index) => {
     addToCard.style.backgroundColor = "#AB1F65"
     addToCard.style.border = "none"
     addToCard.style.borderRadius = "50px"
-    addToCard.style.width = "80%"
+    addToCard.style.width = "50%"
     addToCard.style.height = "50px"
     addToCard.style.justifyContent = "center"
     addToCard.style.margin = "30px"
 
+
     addToCard.addEventListener("mouseover", () => {
-        addToCard.style.width = "85%"
+        addToCard.style.width = "70%"
         addToCard.style.transition = "All 0.5s ease";
         addToCard.style.opacity = 0.7;
     });
     addToCard.addEventListener("mouseout", () => {
-        addToCard.style.width = "80%"
+        addToCard.style.width = "50%"
         addToCard.style.transition = "All 0.5s ease";
         addToCard.style.opacity = 1;
     });
@@ -147,11 +149,11 @@ sofas.forEach((sofa, index) => {
     row.appendChild(col)
     col.appendChild(card)
 
-    img.addEventListener("mouseover", () => {
+
+      img.addEventListener("mouseover", () => {
         img.src = sofasHover[index].link;
     })
     img.addEventListener("mouseout", () => {
-        img.src = sofa.link;
-    })
-})
-
+        img.src = sofa.link
+    });
+});
