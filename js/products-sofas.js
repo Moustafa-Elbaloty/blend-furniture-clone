@@ -79,7 +79,7 @@ sofas.forEach((sofa, index) => {
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
     const card = document.createElement("div")
-    card.className = "card h-100 shadow-sm"
+    card.className = "card h-100 border-0"
     card.style.cursor = "pointer"
 
     const img = document.createElement("img")
@@ -87,25 +87,59 @@ sofas.forEach((sofa, index) => {
     img.className = "card-img-top"
 
     const cardBody = document.createElement("div")
-    cardBody.className = "card-body text-center"
+    cardBody.className = "card-body text-center p-1"
 
-    const title = document.createElement("h6")
+    const title = document.createElement("p")
     title.className = "title "
     title.innerHTML = sofa.name;
+    title.style.fontSize = "15px"
+    title.style.fontWeight = "700"
+
 
     const cardRear = document.createElement("div")
     cardRear.className = "card-rear d-flex justify-content-between p-3 text-center align-items-center";
 
     const showDetails = document.createElement("span")
-    showDetails.className = "show-details d-flex justify-content-left item-center";
-    showDetails.innerHTML = '<i class="fa-solid fa-list-ul d-flex align-self-center"></i> Show Details';
+    showDetails.className = "show-details d-flex justify-content-left item-center text-nowrap";
+    showDetails.innerHTML = '<i class="fa-solid fa-list-ul d-flex align-self-center "></i> Show Details';
+    showDetails.style.fontSize = "11px"
+    showDetails.style.fontWeight = "700"
+
 
     const whishList = document.createElement("span")
-    whishList.className = "whish-list d-flex justify-content-left item-center";
+    whishList.className = "whish-list d-flex flex-row justify-content-left item-center text-nowrap";
     whishList.innerHTML = '<i class="fa-regular fa-star d-flex align-self-center"></i> Add To Wishlist';
+    whishList.style.fontSize = "11px"
+    whishList.style.fontWeight = "700"
+
+
+    const addToCard = document.createElement("button")
+    addToCard.className = "add-to-card d-flex align-items-center align-self-center text-end shadow"
+    addToCard.innerHTML = "Add To Card"
+    addToCard.style.color = "#fff"
+    addToCard.style.backgroundColor = "#AB1F65"
+    addToCard.style.border = "none"
+    addToCard.style.borderRadius = "50px"
+    addToCard.style.width = "80%"
+    addToCard.style.height = "50px"
+    addToCard.style.justifyContent = "center"
+    addToCard.style.margin = "30px"
+
+    addToCard.addEventListener("mouseover", () => {
+        addToCard.style.width = "85%"
+        addToCard.style.transition = "All 0.5s ease";
+        addToCard.style.opacity = 0.7;
+    });
+    addToCard.addEventListener("mouseout", () => {
+        addToCard.style.width = "80%"
+        addToCard.style.transition = "All 0.5s ease";
+        addToCard.style.opacity = 1;
+    });
+
     card.appendChild(img)
     card.appendChild(cardBody)
     card.append(cardRear)
+    card.append(addToCard)
     cardBody.appendChild(title)
     cardBody.appendChild(showDetails)
     cardRear.appendChild(showDetails)
