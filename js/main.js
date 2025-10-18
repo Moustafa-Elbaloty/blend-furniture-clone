@@ -87,7 +87,7 @@ aside.style.cssText = `position: fixed;
     width: 300px;
     height: 100%;transform: translateX(-100%);
     background: var(--bg-color);
-    box-shadow: 0 0 12px 1px var(--sec-txt);z-index: 10000;transition:.5s`
+    box-shadow: 0 0 12px 1px var(--sec-txt);z-index: 100;transition:.5s`
 
 btnShopping.className = "cart-toggle"
 btnShopping.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
@@ -253,4 +253,5 @@ p.textContent = `
 © Copyright ${year} - Blend Furniture - Design & powered by NTI`
 p.style.cssText = `text-align:center;padding:15px;background:var(--bg-color-dark);color:var(--sec-txt-dark);font-size: .8rem;`
 footer.append(p)
+
 
