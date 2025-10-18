@@ -254,6 +254,11 @@ nav .links li a:hover {
 
 /* ///////////////////not complete/////////////////////////////// */
 /* end landing */
+/* start aside */
+aside.show {
+    transform: translateX(0%) !important
+}
+/* end aside */
 /* start feature */
 section.feature .cards {
     display: grid;
@@ -482,3 +487,4 @@ i {
     }
 }
 /* End media */
+
