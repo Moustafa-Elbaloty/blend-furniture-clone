@@ -208,7 +208,7 @@ nav .links li a {
     display: block;
     border-top: 1px solid #1f1f1f1f;
     padding: 10px 25px;
-    color: #1f1f1f8c;
+    color: #1f1f1f8c !important;
     text-transform: capitalize;
     transition: .5s;
 
@@ -487,5 +487,6 @@ i {
     }
 }
 /* End media */
+
 
 
