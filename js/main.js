@@ -78,6 +78,37 @@ links.forEach((a) => {
     })
 }
 )
+//shopping section
+let aside = document.createElement("aside")
+let btnShopping = document.createElement("button")
+aside.classList.add("cart")
+aside.style.cssText = `position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;transform: translateX(-100%);
+    background: var(--bg-color);
+    box-shadow: 0 0 12px 1px var(--sec-txt);z-index: 10000;transition:.5s`
+
+btnShopping.className = "cart-toggle"
+btnShopping.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
+btnShopping.style.cssText = `color: white;
+    background: var(--sec-color);
+    border: none;
+    padding: 7px;
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    cursor: pointer;`
+aside.append(btnShopping)
+document.body.prepend(aside)
+
+btnShopping.addEventListener("click", () => {
+    aside.classList.toggle("show")
+})
+
+
 // style for background landing
 let backGround = document.querySelector(".land-img")
 if (backGround) {
@@ -222,3 +253,4 @@ p.textContent = `
 © Copyright ${year} - Blend Furniture - Design & powered by NTI`
 p.style.cssText = `text-align:center;padding:15px;background:var(--bg-color-dark);color:var(--sec-txt-dark);font-size: .8rem;`
 footer.append(p)
+
