@@ -1,6 +1,5 @@
 // chairs
 
-
 const box = document.createElement("div")
 box.className = "container my-5 "
 box.style.backgroundColor = "#fff"
@@ -80,13 +79,12 @@ chairs.forEach((Chair, index) => {
     img.className = "card-img-top"
 
     const cardBody = document.createElement("div")
-    cardBody.className = "card-body text-center p-1"
+    cardBody.className = "card-body text-center p-1 "
 
-    const title = document.createElement("p")
+    const title = document.createElement("h3")
     title.className = "title "
     title.innerHTML = Chair.name;
     title.style.fontSize = "15px"
-    title.style.fontWeight = "700"
 
 
     const cardRear = document.createElement("div")
@@ -114,23 +112,22 @@ chairs.forEach((Chair, index) => {
     addToCard.style.backgroundColor = "#AB1F65"
     addToCard.style.border = "none"
     addToCard.style.borderRadius = "50px"
-    addToCard.style.width = "80%"
+    addToCard.style.width = "50%"
     addToCard.style.height = "50px"
     addToCard.style.justifyContent = "center"
     addToCard.style.margin = "30px"
 
+
     addToCard.addEventListener("mouseover", () => {
-        addToCard.style.width = "85%"
+        addToCard.style.width = "70%"
         addToCard.style.transition = "All 0.5s ease";
         addToCard.style.opacity = 0.7;
     });
     addToCard.addEventListener("mouseout", () => {
-        addToCard.style.width = "80%"
+        addToCard.style.width = "40%"
         addToCard.style.transition = "All 0.5s ease";
         addToCard.style.opacity = 1;
     });
-
-
 
     card.appendChild(img)
     card.appendChild(cardBody)
