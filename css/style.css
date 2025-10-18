@@ -399,11 +399,13 @@ i {
 }
 
 .error {
-  color: red;
+  color: rgba(255, 0, 0, 0.733);
   font-size: 13px;
-  margin-top: -10px;
+  /* padding-top: 1%; */
 }
-
+.allName .error{
+   padding-top: 1.55%;
+}
 .info .allName label,
 .info label {
   margin-bottom: 4px;
