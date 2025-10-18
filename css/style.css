@@ -188,7 +188,7 @@ nav .links {
     color: white;
     padding: 100px 0;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     overflow: hidden;
     transform-origin: top right;
     transform: scale(0);
@@ -487,4 +487,5 @@ i {
     }
 }
 /* End media */
+
 
