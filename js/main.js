@@ -11,7 +11,7 @@ closeBtn.addEventListener("click", () => {
     list.style.transform = "scale(0)"
 })
 
-// *******btn toup
+// *******btn toup***********
 let btnUp = document.createElement("button")
 btnUp.innerHTML = `<i class="fa-solid fa-circle-up"></i>`
 btnUp.style.cssText = `color: var(--sec-color);
@@ -122,7 +122,7 @@ let images = [
     { src: "images/Home/home06.jpg", data: "sofas" },
     { src: "images/Home/home07.jpg", data: "recliners" },
     { src: "images/Home/home08.jpg", data: "dinin Tables" },
-    { src: "images/Home/home05.jpg", data: "chairs" },
+    { src: "images/Home/home07.jpg", data: "chairs" },
     { src: "images/Home/home06.jpg", data: "coffee tables" }
 ];
 let ul = document.querySelector(".wrap-img");
@@ -253,5 +253,6 @@ p.textContent = `
 © Copyright ${year} - Blend Furniture - Design & powered by NTI`
 p.style.cssText = `text-align:center;padding:15px;background:var(--bg-color-dark);color:var(--sec-txt-dark);font-size: .8rem;`
 footer.append(p)
+
 
 
